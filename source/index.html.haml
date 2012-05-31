@@ -1,4 +1,28 @@
 - content_for :head do
   %title Simple Presentation Engine
 
-%h1 The Middleman is watching.
+%header
+  .wrapper
+    %h1 Presentation.js
+    = link_to 'Github'
+
+#presentation
+  .wrapper
+
+    %article
+      %h1 Simple presentation engine
+      %p Click to continue
+
+    %article
+      %h1
+        You can use
+        %span Left
+        or
+        %span Right
+
+    %article
+      %h1
+        And either
+        %span PgUp
+        or
+        %span PgDown
