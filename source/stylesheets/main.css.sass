@@ -1,5 +1,6 @@
 @import "compass"
 @import "compass/css3"
+@import "compass/css3/user-interface"
 
 $link-color:         #0388a6
 $link-hover-color:   #009ce0
@@ -20,7 +21,8 @@ $side-gutter-width: $gutter-width
 /*@include global-reset*/
 
 body
-  background-color: #eee
+  background: #eee
+  background-image: url(../images/23-a.png), url(../images/31-a.png), url(../images/41-a.png)
   margin: 0
   font-family: $font-family
   color: $font-color
@@ -44,8 +46,36 @@ header
   a
     float: right
 
+.btn
+  background-color: rgba(100, 150, 180, 0.25)
+  @include border-radius(50%)
+  @include box-shadow(0 0 15px #ace)
+  width: 65px
+  height: 70px
+  top: 45%
+  position: absolute
+  cursor: pointer
+  font-family: monospace
+  font-size: 36px
+  line-height: 64px
+  text-align: center
+  @include user-select(none)
+  &:hover
+    background-color: rgba(100, 150, 180, 0.4)
+  &.prev
+    left: 30px
+    padding-left: 5px
+  &.next
+    right: 30px
+    padding-right: 5px
+
 #presentation
   background-color: #fff
+  @include box-shadow(0 5px 50px #888)
   margin: 20px auto
-  width: 864px
-  height: 560px
+  padding: 20px 48px
+  width: 768px
+  height: 520px
+  position: relative
+  article
+    display: none
