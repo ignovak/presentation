@@ -63,19 +63,22 @@ header
   &:hover
     background-color: rgba(100, 150, 180, 0.4)
   &.prev
-    left: 30px
+    left: 5%
     padding-left: 5px
   &.next
-    right: 30px
+    right: 5%
     padding-right: 5px
 
 #presentation
   background-color: #fff
   @include box-shadow(0 5px 50px #888)
-  margin: 20px auto
+  top: 70px
+  right: 18%
+  bottom: 20px
+  left: 18%
   padding: 20px 48px
-  width: 768px
-  height: 520px
-  position: relative
+  position: absolute
   article
     display: none
+  pre
+    border: 1px solid #ccc

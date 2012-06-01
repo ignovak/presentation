@@ -29,3 +29,23 @@
         %span PgUp
         or
         %span PgDown
+
+    %article
+      %h1 It supports
+      %ul
+        %li Lists
+        %li Code
+        %li Blockqoute
+        %li Images
+
+    %article
+      %h1 Put some code here
+      %pre
+        %code
+          :plain
+            $(function() {
+              $('#presentation').present({
+                prevBtn: '.btn.prev',
+                nextBtn: '.btn.next',
+              });
+            });

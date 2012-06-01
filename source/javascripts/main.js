@@ -1,7 +1,8 @@
 $.fn.present = function(options) {
   options = options || {};
   var slides = $('article', this),
-      current = 0;
+      slidesNum = slides.length,
+      currentPage;
 
   $(document).on('keydown', function(e) {
     switch (e.which) {
@@ -16,21 +17,32 @@ $.fn.present = function(options) {
   });
   $(options.prevBtn).on('click', prevSlide);
   $(options.nextBtn).on('click', nextSlide);
+  $(window).on('hashchange', parseHash);
 
-  go(current);
+  parseHash();
 
   function prevSlide() {
-    go(Math.max(0, --current));
+    go(Math.max(0, --currentPage));
   };
 
   function nextSlide() {
-    go(Math.min(slides.length - 1, ++current));
+    go(Math.min(slidesNum - 1, ++currentPage));
   };
 
   function go(n) {
-    current = n;
-    slides.hide().eq(n).show()
+    currentPage = n;
+    slides.hide().eq(n).show();
+    if (window.location.hash !== n) {
+      window.location.hash = n;
+    };
   };
+
+  function parseHash(e) {
+    var page = parseInt(window.location.hash.slice(1)) || 0;
+    if (page >= 0 && page <= slidesNum && page != currentPage) {
+      go(page);
+    };
+  }
 }
 
 $(function() {
