@@ -10,65 +10,70 @@
 .btn.next &rsaquo;
 
 %section#presentation
-  %article
-    %h1 Simple presentation engine
-    %p Click to continue
+  .slides-wrapper
+    %article
+      %h1 Simple presentation engine
+      %p Click to continue
 
-  %article
-    %h1
-      You can use
-      %span Left
-      or
-      %span Right
+    %article
+      %h1
+        You can use
+        %span Left
+        or
+        %span Right
 
-  %article
-    %h1
-      And either
-      %span PgUp
-      or
-      %span PgDown
+    %article
+      %h1
+        And either
+        %span PgUp
+        or
+        %span PgDown
 
-  %article
-    %h1 It supports
-    %ul
-      %li Lists
-      %li Code
-      %li Blockqoute
-      %li Images
+    %article
+      %h1 It supports
+      %ul
+        %li Lists
+        %li Code
+        %li Blockqoute
+        %li Images
 
-  %article
-    %h1 It doesn't supports (yet)
-    %ol
-      %li Code highlighting
-      %li Markdown
-      %li Transform effects
-      %li ...And other things impress.js does
+    %article
+      %h1 It doesn't supports (yet)
+      %ol
+        %li Code highlighting
+        %li Markdown
+        %li Transform effects
+        %li ...And other things impress.js does
 
-  %article
-    %h1 Usage
-    %pre
-      %code
-        :ruby
-          code = "<section id='presentation'>
+    %article
+      %h1 Usage
+      %pre
+        %code
+          :ruby
+            code = "<section id='presentation'>
 
-              <article>
-                <h1>Simple presentation engine</h1>
-                <p>Click to continue</p>
-              </article>
+                <article>
+                  <h1>Simple presentation engine</h1>
+                  <p>Click to continue</p>
+                </article>
 
-            </section>"
-        = h(code)
+              </section>"
+          = h(code)
 
-  %article
-    %h1 Usage
-    %p Then include jquery.js, presentation.js and this code:
-    %pre
-      %code
-        :plain
-          $(function() {
-            $('#presentation').present({
-              prevBtn: '.btn.prev',
-              nextBtn: '.btn.next',
-              fadeDelay: 300 // default: 0
+    %article
+      %h1 Usage
+      %p Then include jquery.js, presentation.js and this code:
+      %pre
+        %code
+          :plain
+            $(function() {
+              $('#presentation').present({
+                prevBtn: '.btn.prev',
+                nextBtn: '.btn.next',
+                fadeDelay: 300 // default: 0
+              });
             });
-          });
+
+    %article
+      %h1 Image
+      = image_tag 'linus.jpg'

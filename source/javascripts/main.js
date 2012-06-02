@@ -1,6 +1,6 @@
 $.fn.present = function(options) {
   options = options || {};
-  var $sheet = $(this),
+  var $sheet = $('.slides-wrapper', this),
       slides = $('article', this),
       slidesNum = slides.length,
       currentPage,
@@ -61,11 +61,27 @@ $.fn.present = function(options) {
 
   function resizeFont() {
     var $page = slides.eq(currentPage);
-    var factor = Math.min($sheet.height() / $page.outerHeight(true),
-                          $sheet.width() / $page.outerWidth(true));
-    var prevFontSize = parseInt($page.css('font-size'));
-    var fontSize = Math.min(~~(prevFontSize * factor), maxFontSize);
-    $page.css('font-size', fontSize + 'px');
+    var fontSize = parseInt($page.css('font-size'));
+    while (isSmall()) {
+      fontSize *= 1.1;
+      $page.css('font-size', ~~fontSize + 'px')
+    };
+    while (isLarge()) {
+      fontSize /= 1.1;
+      $page.css('font-size', ~~fontSize + 'px')
+    };
+
+    function isSmall() {
+      return fontSize < maxFontSize ||
+             $sheet.height() > $page.outerHeight(true) ||
+             $sheet.width() > $page.outerWidth(true)
+    };
+
+    function isLarge() {
+      return fontSize > maxFontSize ||
+             $sheet.height() < $page.outerHeight(true) ||
+             $sheet.width() < $page.outerWidth(true)
+    };
   };
 
 };

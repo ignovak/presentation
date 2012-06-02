@@ -77,12 +77,26 @@ header
   bottom: 20px
   left: 18%
   position: absolute
+  .slides-wrapper
+    top: 20px
+    right: 50px
+    bottom: 20px
+    left: 50px
+    position: absolute
   article
-    padding: 20px 60px
+    min-width: 100%
     display: none
     position: absolute
+    text-align: center
     h1
       font-size: 1.5em
+      text-align: left
+    p, ul, ol, pre
+      text-align: left
+    img
+      max-width: 30em
+      max-height: 15em
+
   pre
     @include box-shadow(0 2px 5px #666)
     padding: 1em 2em
