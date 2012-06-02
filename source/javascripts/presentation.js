@@ -33,6 +33,7 @@
     $(options.nextBtn).on('click', nextSlide);
     $(window).on('hashchange', parseHash);
     $(window).on('resize', resizeFont);
+    $('img').on('load', resizeFont);
 
     parseHash();
 

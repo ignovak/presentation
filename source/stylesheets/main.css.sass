@@ -9,7 +9,7 @@ $link-active-color:  false
 $link-visited-color: false
 
 $font-color:  #2a2a2a
-$font-family: sans-serif
+$font-family: Arial
 $base-font-size:   12px
 $base-line-height: 18px
 
@@ -100,11 +100,23 @@ header
     img
       max-width: 30em
       max-height: 15em
+    blockquote
+      padding-left: 1em
+    cite
+      margin-top: 1em
+      float: right
 
-  pre, table
+  pre
     @include box-shadow(0 2px 5px #666)
     padding: 1em 2em
     display: inline-block
+
+  table
+    display: inline-block
+    border-collapse: collapse
+    td
+      border: 1px solid #aaa
+      padding: 0.5em
 
   .pointer
     position: absolute
