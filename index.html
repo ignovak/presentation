@@ -4,20 +4,23 @@
     <meta charset='utf-8' />
     <link href="stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+    <script src="javascripts/presentation.js" type="text/javascript"></script>
     <script src="javascripts/main.js" type="text/javascript"></script>
     <title>Simple Presentation Engine</title>
   </head>
   <body>
     <header>
       <div class='wrapper'>
-        <h1>Presentation.js</h1>
-        <a href="javascript:void(0);">Github</a>
+        <h1>
+          Presentation.js
+          <a target="_blank" href="http://github.com/ignovak/presentation">Github</a>
+        </h1>
       </div>
     </header>
     <div class='btn prev'>&lsaquo;</div>
     <div class='btn next'>&rsaquo;</div>
-    <section id='presentation'>
-      <div class='slides-wrapper'>
+    <div class='slides-wrapper'>
+      <section id='presentation'>
         <article>
           <h1>Simple presentation engine</h1>
           <div class='pointer'>Click to continue --></div>
@@ -25,58 +28,70 @@
         <article>
           <h1>
             You can use
-            <span>Left</span>
+            <kbd>Left</kbd>
             or
-            <span>Right</span>
+            <kbd>Right</kbd>
+            arrow keys
           </h1>
         </article>
         <article>
           <h1>
-            And either
-            <span>PgUp</span>
-            or
-            <span>PgDown</span>
+            And others...
           </h1>
+          <p>
+            <kbd>PgUp</kbd>,
+            <kbd>PgDown</kbd>,
+            <kbd>Home</kbd>,
+            <kbd>End</kbd>,
+            <kbd>Space</kbd>
+          </p>
         </article>
         <article>
           <h1>This engine supports</h1>
           <ul>
-            <li>Lists</li>
-            <li>Code</li>
-            <li>Blockqoute</li>
-            <li>Images</li>
+            <li>
+              Different tags
+              <ul>
+                <li>Lists</li>
+                <li>Code</li>
+                <li>Blockqoute</li>
+                <li>Images</li>
+                <li>Tables</li>
+                <li>Links</li>
+              </ul>
+            </li>
+            <li>Navigation (with mouse, keyboard and location hash)</li>
+            <li>Automatic font-size tuning</li>
           </ul>
         </article>
         <article>
           <h1>It doesn't supports (yet)</h1>
           <ol>
+            <li>Javascriptlessness :)</li>
             <li>Code highlighting</li>
             <li>Markdown</li>
-            <li>Transform effects</li>
-            <li>...And other things impress.js does</li>
+            <li>Transform animation effects</li>
+            <li>
+              ...And other things
+              <a target="_blank" href="http://bartaz.github.com/impress.js">impress.js</a>
+              does
+            </li>
           </ol>
         </article>
         <article>
           <h1>Usage</h1>
-          <pre><code>&lt;section id=&#x27;presentation&#x27;&gt;
-          
-              &lt;article&gt;
-                &lt;h1&gt;Simple presentation engine&lt;&#x2F;h1&gt;
-                &lt;p&gt;Click to continue&lt;&#x2F;p&gt;
-              &lt;&#x2F;article&gt;
-          
-            &lt;&#x2F;section&gt;</code></pre>
+          <p>
+            Put each page of your presentation into an
+            <code>&lt;article&gt;</code>
+            tag.
+          </p>
+          <p>Wrap pages with some element.</p>
+          <pre><code>&lt;section id='presentation'&gt;&#x000A;&#x000A;  &lt;article&gt;&#x000A;    &lt;h1&gt;Simple presentation engine&lt;/h1&gt;&#x000A;    &lt;p&gt;Click to continue&lt;/p&gt;&#x000A;  &lt;/article&gt;&#x000A;&#x000A;&lt;/section&gt;</code></pre>
         </article>
         <article>
           <h1>Usage</h1>
           <p>Then include jquery.js, presentation.js and this code:</p>
-          <pre><code>$(function() {
-            $('#presentation').present({
-              prevBtn: '.btn.prev',
-              nextBtn: '.btn.next',
-              fadeDelay: 300 // default: 0
-            });
-          });</code></pre>
+          <pre><code>$(function() {&#x000A;  $('#presentation').present({&#x000A;    prevBtn: '.btn.prev',&#x000A;    nextBtn: '.btn.next',&#x000A;    fadeDelay: 300 // default: 0&#x000A;  });&#x000A;});&#x000A;</code></pre>
         </article>
         <article>
           <h1>Image</h1>
@@ -106,7 +121,21 @@
         <article>
           <h1>That's it</h1>
         </article>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20030066-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </body>
 </html>

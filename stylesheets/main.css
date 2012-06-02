@@ -31,10 +31,12 @@ header {
   padding: 5px; }
   header h1 {
     margin: 0;
-    float: left;
     color: #eeeeee; }
   header a {
-    float: right; }
+    float: right;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 44px; }
 
 .btn {
   background-color: rgba(100, 150, 180, 0.25);
@@ -67,7 +69,7 @@ header {
     right: 5%;
     padding-right: 5px; }
 
-#presentation {
+.slides-wrapper {
   background-color: white;
   -webkit-box-shadow: 0 5px 50px #888888;
   -moz-box-shadow: 0 5px 50px #888888;
@@ -77,12 +79,13 @@ header {
   bottom: 20px;
   left: 18%;
   position: absolute; }
-  #presentation .slides-wrapper {
-    top: 20px;
-    right: 50px;
-    bottom: 20px;
-    left: 50px;
-    position: absolute; }
+
+#presentation {
+  top: 20px;
+  right: 50px;
+  bottom: 20px;
+  left: 50px;
+  position: absolute; }
   #presentation article {
     min-width: 100%;
     min-height: 100%;
