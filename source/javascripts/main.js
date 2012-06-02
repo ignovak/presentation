@@ -22,18 +22,21 @@ $.fn.present = function(options) {
   parseHash();
 
   function prevSlide() {
-    go(Math.max(0, --currentPage));
+    go(Math.max(0, currentPage - 1));
   };
 
   function nextSlide() {
-    go(Math.min(slidesNum - 1, ++currentPage));
+    go(Math.min(slidesNum - 1, currentPage + 1));
   };
 
-  function go(n) {
-    currentPage = n;
-    slides.hide().eq(n).show();
-    if (window.location.hash !== n) {
-      window.location.hash = n;
+  function go(page) {
+    var delay = options.delay || 0;
+    slides.eq(currentPage || 0).fadeOut(delay, function() {
+      currentPage = page;
+      slides.eq(page).fadeIn(delay);
+    });
+    if (window.location.hash !== page) {
+      window.location.hash = page;
     };
   };
 
@@ -49,5 +52,6 @@ $(function() {
   $('#presentation').present({
     prevBtn: '.btn.prev',
     nextBtn: '.btn.next',
+    delay: 300
   });
 });
