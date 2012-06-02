@@ -3,7 +3,7 @@ body {
   background: #eeeeee;
   background-image: url(../images/23-a.png), url(../images/31-a.png), url(../images/41-a.png);
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial;
   color: #2a2a2a; }
 
 a {
@@ -100,12 +100,23 @@ header {
     #presentation article img {
       max-width: 30em;
       max-height: 15em; }
-  #presentation pre, #presentation table {
+    #presentation article blockquote {
+      padding-left: 1em; }
+    #presentation article cite {
+      margin-top: 1em;
+      float: right; }
+  #presentation pre {
     -webkit-box-shadow: 0 2px 5px #666666;
     -moz-box-shadow: 0 2px 5px #666666;
     box-shadow: 0 2px 5px #666666;
     padding: 1em 2em;
     display: inline-block; }
+  #presentation table {
+    display: inline-block;
+    border-collapse: collapse; }
+    #presentation table td {
+      border: 1px solid #aaaaaa;
+      padding: 0.5em; }
   #presentation .pointer {
     position: absolute;
     top: 40%;
