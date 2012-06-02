@@ -1,16 +1,5 @@
-- content_for :head do
-  %title Simple Presentation Engine
-
-%header
-  .wrapper
-    %h1 Presentation.js
-    = link_to 'Github'
-
-.btn.prev &lsaquo;
-.btn.next &rsaquo;
-
-%section#presentation
-  .slides-wrapper
+.slides-wrapper
+  %section#presentation
     %article
       %h1 Simple presentation engine
       .pointer Click to continue -->
@@ -18,54 +7,75 @@
     %article
       %h1
         You can use
-        %span Left
+        %kbd Left
         or
-        %span Right
+        %kbd Right
+        arrow keys
 
     %article
       %h1
-        And either
-        %span PgUp
-        or
-        %span PgDown
+        And others...
+      %p
+        <kbd>PgUp</kbd>,
+        <kbd>PgDown</kbd>,
+        <kbd>Home</kbd>,
+        <kbd>End</kbd>,
+        <kbd>Space</kbd>
 
     %article
       %h1 This engine supports
       %ul
-        %li Lists
-        %li Code
-        %li Blockqoute
-        %li Images
+        %li
+          Different tags
+          %ul
+            %li Lists
+            %li Code
+            %li Blockqoute
+            %li Images
+            %li Tables
+            %li Links
+        %li Navigation (with mouse, keyboard and location hash)
+        %li Automatic font-size tuning
 
     %article
       %h1 It doesn't supports (yet)
       %ol
+        %li Javascriptlessness :)
         %li Code highlighting
         %li Markdown
-        %li Transform effects
-        %li ...And other things impress.js does
+        %li Transform animation effects
+        %li
+          \...And other things
+          = link_to 'impress.js', 'http://bartaz.github.com/impress.js', target: '_blank'
+          does
 
     %article
       %h1 Usage
+      %p
+        Put each page of your presentation into an
+        %code
+          &lt;article&gt;
+        tag.
+      %p Wrap pages with some element.
       %pre
         %code
-          :ruby
-            code = "<section id='presentation'>
+          = preserve do
+            :escaped
+              <section id='presentation'>
 
                 <article>
                   <h1>Simple presentation engine</h1>
                   <p>Click to continue</p>
                 </article>
 
-              </section>"
-          = h(code)
+              </section>
 
     %article
       %h1 Usage
       %p Then include jquery.js, presentation.js and this code:
       %pre
         %code
-          :plain
+          :preserve
             $(function() {
               $('#presentation').present({
                 prevBtn: '.btn.prev',
@@ -75,8 +85,7 @@
             });
 
     %article
-      %h1 
-        = link_to 'Image'
+      %h1 Image
       = image_tag 'linus.jpg'
 
     %article

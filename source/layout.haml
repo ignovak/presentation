@@ -4,8 +4,19 @@
     %meta{ charset: 'utf-8' }
     = stylesheet_link_tag 'main.css'
     = javascript_include_tag 'jquery.min.js'
+    = javascript_include_tag 'presentation.js'
     = javascript_include_tag 'main.js'
-    = yield_content :head
+    %title Simple Presentation Engine
 
   %body
+
+    %header
+      .wrapper
+        %h1
+          Presentation.js
+          = link_to 'Github', 'http://github.com/ignovak/presentation', target: '_blank'
+
+    .btn.prev &lsaquo;
+    .btn.next &rsaquo;
+
     = yield

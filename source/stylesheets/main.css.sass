@@ -42,10 +42,12 @@ header
   padding: 5px
   h1
     margin: 0
-    float: left
     color: #eee
   a
     float: right
+    font-weight: normal
+    font-size: 24px
+    line-height: 44px
 
 .btn
   background-color: rgba(100, 150, 180, 0.25)
@@ -70,7 +72,7 @@ header
     right: 5%
     padding-right: 5px
 
-#presentation
+.slides-wrapper
   background-color: #fff
   @include box-shadow(0 5px 50px #888)
   top: 70px
@@ -78,12 +80,12 @@ header
   bottom: 20px
   left: 18%
   position: absolute
-  .slides-wrapper
-    top: 20px
-    right: 50px
-    bottom: 20px
-    left: 50px
-    position: absolute
+#presentation
+  top: 20px
+  right: 50px
+  bottom: 20px
+  left: 50px
+  position: absolute
   article
     min-width: 100%
     min-height: 100%
