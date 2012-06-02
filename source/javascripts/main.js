@@ -14,9 +14,16 @@ $.fn.present = function(options) {
       case 37:
         prevSlide();
         break;
+      case 32:
       case 34:
       case 39:
         nextSlide();
+        break;
+      case 36:
+        go(0);
+        break;
+      case 35:
+        go(slidesNum - 1);
     }
   });
   $(options.prevBtn).on('click', prevSlide);
@@ -54,6 +61,14 @@ $.fn.present = function(options) {
 
     if (window.location.hash !== currentPage) {
       window.location.hash = currentPage;
+    };
+
+    $(options.prevBtn).show();
+    $(options.nextBtn).show();
+    if (currentPage == 0) {
+      $(options.prevBtn).hide();
+    } else if (currentPage == slidesNum - 1) {
+      $(options.nextBtn).hide();
     };
 
     resizeFont();

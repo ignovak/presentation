@@ -29,6 +29,7 @@ body
 
 a
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+  text-decoration: none
 
 .wrapper
   margin: auto
@@ -85,19 +86,25 @@ header
     position: absolute
   article
     min-width: 100%
+    min-height: 100%
     display: none
     position: absolute
     text-align: center
     h1
       font-size: 1.5em
       text-align: left
-    p, ul, ol, pre
+    p, ul, ol, pre, table, blockquote
       text-align: left
     img
       max-width: 30em
       max-height: 15em
 
-  pre
+  pre, table
     @include box-shadow(0 2px 5px #666)
     padding: 1em 2em
     display: inline-block
+
+  .pointer
+    position: absolute
+    top: 40%
+    right: -30px

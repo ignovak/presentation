@@ -13,7 +13,7 @@
   .slides-wrapper
     %article
       %h1 Simple presentation engine
-      %p Click to continue
+      .pointer Click to continue -->
 
     %article
       %h1
@@ -30,7 +30,7 @@
         %span PgDown
 
     %article
-      %h1 It supports
+      %h1 This engine supports
       %ul
         %li Lists
         %li Code
@@ -75,5 +75,25 @@
             });
 
     %article
-      %h1 Image
+      %h1 
+        = link_to 'Image'
       = image_tag 'linus.jpg'
+
+    %article
+      %blockquote
+        Abstruse quote
+      %table
+        %tr
+          %td Here
+          %td should
+          %td be
+        %tr
+          %td Some
+          %td reasonable
+          %td table
+        %tr
+          %td but
+          %td ...
+
+    %article
+      %h1 That's it
