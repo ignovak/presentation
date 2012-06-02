@@ -1,4 +1,4 @@
-![Demo](http://ignovak.github.com/presentation)
+[Demo](http://ignovak.github.com/presentation)
 
 This page has been built with [Middleman](http://middlemanapp.com).
 For launching it locally use
@@ -8,6 +8,6 @@ For launching it locally use
     $ cd presentation
     $ middleman
 
-That will launch the app on port 4567.
+That will launch the app on localhost:4567.
 
-If you just want a build, you can find it in this [branch](http://github.com/ignovak/presentation/tree/gh-pages/)
+If you just want a build, you can find it in this [branch](http://github.com/ignovak/presentation/tree/gh-pages/).
