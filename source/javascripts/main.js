@@ -30,7 +30,7 @@ $.fn.present = function(options) {
   };
 
   function go(page) {
-    var delay = options.delay || 0;
+    var delay = options.fadeDelay || 0;
     slides.eq(currentPage || 0).fadeOut(delay, function() {
       currentPage = page;
       slides.eq(page).fadeIn(delay);
@@ -52,6 +52,6 @@ $(function() {
   $('#presentation').present({
     prevBtn: '.btn.prev',
     nextBtn: '.btn.next',
-    delay: 300
+    // fadeDelay: 300
   });
 });
