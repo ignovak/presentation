@@ -1,4 +1,8 @@
 [Demo](http://ignovak.github.com/presentation)
+[Nojs Demo](http://ignovak.github.com/presentation/nojs.html)
+
+Note: nojs page uses navigating by tabindexes.
+TODO: navigating using location hash and :target pseudoclass.
 
 This page has been built with [Middleman](http://middlemanapp.com).
 For launching it locally use

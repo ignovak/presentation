@@ -2,7 +2,7 @@
   %section#presentation
     %article
       %h1 Simple presentation engine
-      .pointer Click to continue -->
+      .pointer Click to continue --&gt;
 
     %article
       %h1
@@ -34,13 +34,20 @@
             %li Images
             %li Tables
             %li Links
-        %li Navigation (with mouse, keyboard and location hash)
+        %li
+          Navigation (with mouse, keyboard and
+          = link_to 'location hash', '#4'
+          )
         %li Automatic font-size tuning
 
     %article
       %h1 It doesn't supports (yet)
       %ol
-        %li Javascriptlessness :)
+        %li
+          Javascriptlessness.
+          But
+          = link_to 'this', 'http://ignovak.github.com/presentation/nojs.html', target: '_blank'
+          page does!
         %li Code highlighting
         %li Markdown
         %li Transform animation effects
