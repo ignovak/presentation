@@ -42,18 +42,18 @@ header {
   background: none;
   border: none;
   outline: none;
-  top: 40%;
+  top: -40%;
   left: 50%;
   margin-left: -4em;
-  display: none;
   position: absolute;
+  cursor: default;
   font-size: 2em;
   z-index: 10;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none; }
   #start:focus {
-    display: block; }
+    top: 40%; }
 
 .slides-wrapper {
   background-color: white;

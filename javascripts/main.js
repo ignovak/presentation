@@ -2,6 +2,6 @@ $(function() {
   $('#presentation').present({
     prevBtn: '.btn.prev',
     nextBtn: '.btn.next',
-    fadeDelay: 300
+    fadeDelay: 250
   });
 });

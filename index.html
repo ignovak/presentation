@@ -23,7 +23,7 @@
       <section id='presentation'>
         <article>
           <h1>Simple presentation engine</h1>
-          <div class='pointer'>Click to continue --></div>
+          <div class='pointer'>Click to continue --&gt;</div>
         </article>
         <article>
           <h1>
@@ -60,14 +60,23 @@
                 <li>Links</li>
               </ul>
             </li>
-            <li>Navigation (with mouse, keyboard and location hash)</li>
+            <li>
+              Navigation (with mouse, keyboard and
+              <a href="#4">location hash</a>
+              )
+            </li>
             <li>Automatic font-size tuning</li>
           </ul>
         </article>
         <article>
           <h1>It doesn't supports (yet)</h1>
           <ol>
-            <li>Javascriptlessness :)</li>
+            <li>
+              Javascriptlessness.
+              But
+              <a target="_blank" href="http://ignovak.github.com/presentation/nojs.html">this</a>
+              page does!
+            </li>
             <li>Code highlighting</li>
             <li>Markdown</li>
             <li>Transform animation effects</li>
@@ -131,19 +140,5 @@
         </article>
       </section>
     </div>
-
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-20030066-4']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
   </body>
 </html>
